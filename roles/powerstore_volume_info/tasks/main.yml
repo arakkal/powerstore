@@ -1,0 +1,13 @@
+---
+# tasks file for powerstore_volume_info
+  - name: Include connection variables
+    include_vars: ../powerstore_common/vars/main.yml
+
+  - name: Get volume details using ID
+    dellemc.powerstore.dellemc_powerstore_volume:
+     array_ip: "{{array_ip}}"
+     verifycert: "{{verifycert}}"
+     user: "{{user}}"
+     password: "{{password}}"
+     vol_id: "{{ volume_details.volume_details.id}}"
+     state: "present"
