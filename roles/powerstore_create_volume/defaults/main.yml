@@ -1,6 +1,0 @@
----
-# defaults file for powerstore_create_volume
-    vg_name: "Ansible_Test_vg"
-    vol_name: 'demo_volume_arakkal'   
-    cap_unit: 'GB'
-    performance_policy: 'medium'
